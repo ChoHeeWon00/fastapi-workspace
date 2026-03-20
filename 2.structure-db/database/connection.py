@@ -10,4 +10,6 @@ def conn():
     SQLModel.metadata.create_all(engine_url)
 def get_session():
     with Session(engine_url) as session:
-        yield session
+       print("시작") 
+       yield session
+       print("끝")
